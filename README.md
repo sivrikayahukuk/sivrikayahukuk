@@ -1,16 +1,13 @@
-## Hi there 👋
+# Sivrikaya Hukuk - Boutique Legal Counsel Website
 
-<!--
-**sivrikayahukuk/sivrikayahukuk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Matrix-inspired boutique legal counsel website for Avukat Kerem Sivrikaya.
 
-Here are some ideas to get you started:
+## Run locally
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Open `index.html` in your browser or serve with a simple static server.
+
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
