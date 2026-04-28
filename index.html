@@ -173,6 +173,73 @@
         <div class="grid-3" id="insights-grid"></div>
       </section>
 
+      <section id="compliance" class="page-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="complianceEyebrow">Compliance Tools</p>
+          <h2 data-i18n="complianceTitle">Sanction Double-Checker & Fact-Checking Expert</h2>
+          <p class="lead" data-i18n="complianceLead">
+            Cross-check entities against multi-jurisdictional sanctions lists and verify claims against curated facts. Outputs are linked through a shared evidence panel.
+          </p>
+          <p class="form-note compliance-disclaimer" data-i18n="complianceDisclaimer">
+            Illustrative sample data. Not a substitute for production sanctions screening or legal advice.
+          </p>
+        </div>
+        <div class="compliance-grid">
+          <div class="compliance-card" id="sanction-card">
+            <div class="eyebrow" data-i18n="sanctionEyebrow">Structured · Sanction Lists</div>
+            <h3 data-i18n="sanctionTitle">Sanction Double-Checker</h3>
+            <p data-i18n="sanctionLead">
+              Screens an entity name against OFAC SDN, EU Consolidated, UN 1267, and UK OFSI samples. Hits on a single list are flagged "needs corroboration"; hits on two or more are marked "corroborated".
+            </p>
+            <label>
+              <span data-i18n="sanctionLabel">Entity name</span>
+              <input
+                type="text"
+                id="sanction-input"
+                placeholder="Acme Holding LLC"
+                data-i18n-placeholder="sanctionPlaceholder"
+              />
+            </label>
+            <button type="button" id="sanction-run" class="primary" data-i18n="sanctionRun">Run Screen</button>
+            <div id="sanction-results" class="result-list"></div>
+          </div>
+          <div class="compliance-card" id="fact-card">
+            <div class="eyebrow" data-i18n="factEyebrow">Unstructured · Claims</div>
+            <h3 data-i18n="factTitle">Fact-Checking Expert</h3>
+            <p data-i18n="factLead">
+              Verifies a free-text claim against a curated knowledge base. Returns a verdict with sources and the entities it extracted from your claim.
+            </p>
+            <label>
+              <span data-i18n="factLabel">Claim</span>
+              <textarea
+                id="fact-input"
+                rows="3"
+                placeholder="Acme Holding LLC was sanctioned by OFAC in 2023."
+                data-i18n-placeholder="factPlaceholder"
+              ></textarea>
+            </label>
+            <button type="button" id="fact-run" class="primary" data-i18n="factRun">Verify Claim</button>
+            <div id="fact-results" class="result-list"></div>
+          </div>
+        </div>
+        <div class="combined-row">
+          <button type="button" id="combined-run" class="ghost" data-i18n="combinedRun">Run Combined Check ↔</button>
+          <button type="button" id="compliance-reset" class="ghost" data-i18n="complianceReset">Clear</button>
+        </div>
+        <div class="evidence-panel" id="evidence-panel">
+          <div class="evidence-header">
+            <p class="eyebrow" data-i18n="evidenceEyebrow">Cross-linked evidence</p>
+            <h3 data-i18n="evidenceTitle">Evidence Bridge</h3>
+            <p class="evidence-hint" data-i18n="evidenceHint">
+              Entities from the fact-check are auto-screened. Sanction hits surface any related claims. Each row links structured (sanction) ↔ unstructured (claim) information.
+            </p>
+          </div>
+          <div id="evidence-rows" class="evidence-rows">
+            <p class="evidence-empty" data-i18n="evidenceEmpty">Run a screen or a fact-check to populate the bridge.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="page-section">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
